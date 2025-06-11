@@ -8,6 +8,8 @@ const app = express();
 // Convierte JSON entrante
 app.use(express.json());
 
+// Rutas
+app.use('/api/auditoria', auditoriaRutas);
 
 // Conexion a la base de datos
 mongoose.connect(process.env.MONGODB_URI, {
