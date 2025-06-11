@@ -1,4 +1,4 @@
-import Auditoria from "../models/Auditoria";
+import Auditoria from "../models/Auditoria.js";
 
 export const crearRegistro = async (req, res) => {
     try {

@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import auditoriaRoutes from './routes/auditoriaRoutes.js';
 
 dotenv.config();
 const app = express();
@@ -9,12 +10,10 @@ const app = express();
 app.use(express.json());
 
 // Rutas
-app.use('/api/auditoria', auditoriaRutas);
+app.use('/api/auditoria', auditoriaRoutes);
 
 // Conexion a la base de datos
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+mongoose.connect(process.env.MONGO_URI, {
 }).then(() => {
     console.log('Conectado a MongoDB');
     app.listen(process.env.PORT, () => 
