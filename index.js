@@ -22,3 +22,5 @@ mongoose.connect(process.env.MONGODB_URI, {
     );
 }).catch(err => {
     console.error('Error al conectar a MongoDB:', err);
+});
+
