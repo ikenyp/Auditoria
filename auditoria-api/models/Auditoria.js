@@ -5,7 +5,7 @@ const auditoriaSchema = new mongoose.Schema({
     accion: { type: String, required: true },
     tipo: { type: String, required: true },
     codigoDocumento: { type: String, required: true },
-    detalleAnterior: { type: Object, defauult: {} },
+    detalleAnterior: { type: Object, default: {} },
     detalleNuevo: { type: Object, default: {} },
 }, {timestamps: true});
 
